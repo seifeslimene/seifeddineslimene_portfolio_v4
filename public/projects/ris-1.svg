@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" role="img" aria-label="RIS preview 1">
+  <defs><linearGradient id="g-r1" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="0%" stop-color="#1e3a8a"/><stop offset="100%" stop-color="#0f766e"/></linearGradient></defs>
+  <rect width="800" height="450" fill="url(#g-r1)"/>
+  <text x="400" y="238" text-anchor="middle" fill="rgba(255,255,255,0.92)" font-family="system-ui,sans-serif" font-size="26" font-weight="600">RIS - Records</text>
+</svg>

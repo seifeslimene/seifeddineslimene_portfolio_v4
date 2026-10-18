@@ -5,61 +5,10 @@ import Image from "next/image"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "./ui/card"
 import { Badge } from "./ui/badge"
 import { Button } from "./ui/button"
-import { Github, ExternalLink, Star, GitFork, Images } from "lucide-react"
+import { Github, ExternalLink, GitFork, Images, Star } from "lucide-react"
 import { ProjectGalleryLightbox } from "./ProjectGalleryLightbox"
 import { publicUrl } from "@/lib/utils"
-
-type Project = {
-  title: string
-  description: string
-  technologies: string[]
-  metrics: Record<string, string>
-  github: string
-  live: string
-  stars: number
-  forks: number
-  /** First image is the card cover; all images appear in the lightbox. */
-  images: string[]
-}
-
-const projects: Project[] = [
-  {
-    title: "Devex Learning Platform",
-    description:
-      "Collaborative education platform with course upload, authentication, and custom dashboards for students.",
-    technologies: ["React", "Node.js", "PostgreSQL", "TailwindCSS", "JWT"],
-    metrics: { users: "200+", features: "Dashboard, Upload, Auth", status: "In Progress" },
-    github: "https://github.com/seifeslimene/devex",
-    live: "#",
-    stars: 18,
-    forks: 6,
-    images: ["/projects/devex-1.svg", "/projects/devex-2.svg", "/projects/devex-3.svg"],
-  },
-  {
-    title: "Tarjum Translator App",
-    description:
-      "Cross-platform translation app with real-time language detection and offline support, built with friends.",
-    technologies: ["React Native", "Expo", "TypeScript", "Google Translate API"],
-    metrics: { downloads: "150+", languages: "100+", mode: "Offline/Online" },
-    github: "https://github.com/seifeslimene/tarjum",
-    live: "#",
-    stars: 12,
-    forks: 3,
-    images: ["/projects/tarjum-1.svg", "/projects/tarjum-2.svg", "/projects/tarjum-3.svg"],
-  },
-  {
-    title: "RIS – Radiology Information System",
-    description:
-      "Fullstack healthcare system for managing patient radiology records, appointments, and reports locally.",
-    technologies: ["Vite", "React", "SQLite", "Node.js", "Express"],
-    metrics: { clinics: "3", features: "Admin Panel, Secure Login", status: "Prototype" },
-    github: "https://github.com/seifeslimene/ris-app",
-    live: "#",
-    stars: 9,
-    forks: 2,
-    images: ["/projects/ris-1.svg", "/projects/ris-2.svg", "/projects/ris-3.svg"],
-  },
-]
+import { projects } from "./projectsData"
 
 function ProjectsSection() {
   const [gallery, setGallery] = useState<{ title: string; images: string[] } | null>(null)
@@ -89,7 +38,7 @@ function ProjectsSection() {
 
             return (
               <Card
-                key={project.title}
+                key={project.id}
                 className="flex h-full min-h-0 flex-col overflow-hidden rounded-xl border-white/10 bg-white/5 backdrop-blur-sm transition-colors duration-300 hover:bg-white/10 group min-w-0"
               >
                 <CardHeader className="flex flex-shrink-0 flex-col gap-4 space-y-0 p-5 sm:p-6 pb-4">
@@ -98,15 +47,22 @@ function ProjectsSection() {
                       {project.title}
                     </CardTitle>
                     <div className="flex shrink-0 gap-1">
-                      <Button
-                        size="sm"
-                        variant="ghost"
-                        className="h-9 w-9 shrink-0 p-0 text-white/70 hover:bg-white/10 hover:text-white"
-                        onClick={() => window.open(project.github, "_blank")}
-                        aria-label="GitHub repository"
-                      >
-                        <Github size={18} />
-                      </Button>
+                      {(project.githubLinks.length
+                        ? project.githubLinks
+                        : [{ label: "Repository", url: project.github }]
+                      ).map((link) => (
+                        <Button
+                          key={link.url}
+                          size="sm"
+                          variant="ghost"
+                          className="h-9 w-9 shrink-0 p-0 text-white/70 hover:bg-white/10 hover:text-white"
+                          onClick={() => window.open(link.url, "_blank")}
+                          aria-label={link.label}
+                          title={link.label}
+                        >
+                          <Github size={18} />
+                        </Button>
+                      ))}
                       {project.live !== "#" && (
                         <Button
                           size="sm"
@@ -187,18 +143,20 @@ function ProjectsSection() {
                     ))}
                   </div>
 
-                  <div className="mt-auto flex items-center border-t border-white/10 pt-4 text-sm tabular-nums text-white/55">
-                    <div className="flex items-center gap-5">
-                      <span className="inline-flex items-center gap-1.5">
-                        <Star size={15} className="text-amber-400/90" aria-hidden />
-                        {project.stars}
-                      </span>
-                      <span className="inline-flex items-center gap-1.5">
-                        <GitFork size={15} className="text-white/45" aria-hidden />
-                        {project.forks}
-                      </span>
+                  {(project.stars > 0 || project.forks > 0) && (
+                    <div className="mt-auto flex items-center border-t border-white/10 pt-4 text-sm tabular-nums text-white/55">
+                      <div className="flex items-center gap-5">
+                        <span className="inline-flex items-center gap-1.5">
+                          <Star size={15} className="text-amber-400/90" aria-hidden />
+                          {project.stars}
+                        </span>
+                        <span className="inline-flex items-center gap-1.5">
+                          <GitFork size={15} className="text-white/45" aria-hidden />
+                          {project.forks}
+                        </span>
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </CardContent>
               </Card>
             )

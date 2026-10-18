@@ -11,6 +11,10 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ message: "Missing fields" }, { status: 400 });
   }
 
+  if (!process.env.SMTP_USER || !process.env.SMTP_PASS || !process.env.SMTP_RECEIVER) {
+    return NextResponse.json({ message: "Email is not configured" }, { status: 500 });
+  }
+
   try {
     const transporter = nodemailer.createTransport({
       service: "Gmail",
@@ -21,8 +25,9 @@ export async function POST(req: NextRequest) {
     });
 
     await transporter.sendMail({
-      from: `"${name}" <${email}>`,
-      to: process.env.SMTP_RECEIVER, // your receiving address
+      from: process.env.SMTP_USER,
+      replyTo: `"${name}" <${email}>`,
+      to: process.env.SMTP_RECEIVER,
       subject: subject,
       html: `
         <h3>New Contact Message</h3>

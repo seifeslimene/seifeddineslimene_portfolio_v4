@@ -13,18 +13,25 @@ function ContactSection() {
     subject: "",
     message: "",
   })
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle")
 
-  const handleSubmit = async  (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+    setStatus("sending")
+
     const res = await fetch("/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     })
-    
+
+    if (!res.ok) {
+      setStatus("error")
+      return
+    }
 
     setFormData({ name: "", email: "", subject: "", message: "" })
+    setStatus("sent")
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -151,11 +158,18 @@ function ContactSection() {
                 </div>
                 <Button
                   type="submit"
+                  disabled={status === "sending"}
                   className="w-full bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600"
                 >
                   <Send className="mr-2" size={16} />
-                  Send Message
+                  {status === "sending" ? "Sending..." : "Send Message"}
                 </Button>
+                {status === "sent" && (
+                  <p className="text-sm text-cyan-300">Message sent. I’ll get back to you soon.</p>
+                )}
+                {status === "error" && (
+                  <p className="text-sm text-rose-300">The message could not be sent. Please email me directly.</p>
+                )}
               </form>
             </CardContent>
           </Card>

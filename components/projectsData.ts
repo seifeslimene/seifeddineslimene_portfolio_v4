@@ -149,7 +149,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/booking_system_plugin_clone"
       }
     ],
-    "live": "#",
+    "live": "https://booking.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
@@ -489,7 +489,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/react_phone_ecommerce"
       }
     ],
-    "live": "#",
+    "live": "https://phonestore.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
@@ -817,7 +817,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/vanille_online_store"
       }
     ],
-    "live": "#",
+    "live": "https://vanilla.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [

@@ -67,11 +67,12 @@ function ProjectsSection() {
                         <Button
                           size="sm"
                           variant="ghost"
-                          className="h-9 w-9 shrink-0 p-0 text-white/70 hover:bg-white/10 hover:text-white"
+                          className="h-9 shrink-0 gap-1 px-2 text-white/70 hover:bg-white/10 hover:text-white"
                           onClick={() => window.open(project.live, "_blank")}
-                          aria-label="Live demo"
+                          aria-label="Visit project"
                         >
-                          <ExternalLink size={18} />
+                          <ExternalLink size={16} />
+                          Visit
                         </Button>
                       )}
                     </div>

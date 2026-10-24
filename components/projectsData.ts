@@ -37,7 +37,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/blogify"
       }
     ],
-    "live": "#",
+    "live": "https://blogify.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
@@ -64,7 +64,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/mosaic"
       }
     ],
-    "live": "#",
+    "live": "https://mosaic.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
@@ -90,7 +90,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/webshop"
       }
     ],
-    "live": "#",
+    "live": "https://webshop.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
@@ -119,7 +119,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/webshop_mobile_app"
       }
     ],
-    "live": "#",
+    "live": "https://webshop-mobile.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
@@ -178,7 +178,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/chattorro"
       }
     ],
-    "live": "#",
+    "live": "https://chattorro.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
@@ -207,7 +207,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/dev_finder/"
       }
     ],
-    "live": "#",
+    "live": "https://devfinder.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
@@ -242,7 +242,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/you_com_frontend"
       }
     ],
-    "live": "#",
+    "live": "https://favourites.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
@@ -276,7 +276,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/e_commerce_informatique_front"
       }
     ],
-    "live": "#",
+    "live": "https://informatique.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
@@ -308,7 +308,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/flex_farm_frontend"
       }
     ],
-    "live": "#",
+    "live": "https://flexfarm.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
@@ -342,7 +342,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/fusion_smart_backend"
       }
     ],
-    "live": "#",
+    "live": "https://fusionsmart.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
@@ -389,7 +389,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/ecommerce_green_admin"
       }
     ],
-    "live": "#",
+    "live": "https://herbal.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
@@ -424,7 +424,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/influen_x_frontend"
       }
     ],
-    "live": "#",
+    "live": "https://influenx.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
@@ -457,7 +457,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/ingiz_mobile_app_front"
       }
     ],
-    "live": "#",
+    "live": "https://ingiz.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
@@ -523,7 +523,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/sales_api"
       }
     ],
-    "live": "#",
+    "live": "https://sales.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
@@ -556,7 +556,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/seif_shop_admin"
       }
     ],
-    "live": "#",
+    "live": "https://seifshop.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
@@ -585,7 +585,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/seif_store"
       }
     ],
-    "live": "#",
+    "live": "https://seifstore.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
@@ -622,7 +622,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/seo_blog_front"
       }
     ],
-    "live": "#",
+    "live": "https://seoblog.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
@@ -661,7 +661,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/tunisia_gadgets_mobile_app_admin"
       }
     ],
-    "live": "#",
+    "live": "https://tunisia-gadgets.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
@@ -692,7 +692,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/tunisia_green_ecommerce_mobile_app_frontend"
       }
     ],
-    "live": "#",
+    "live": "https://tunisia-green.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
@@ -724,7 +724,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/tunisia_movies_mobile_app"
       }
     ],
-    "live": "#",
+    "live": "https://tunisia-movies.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
@@ -758,7 +758,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/tunisia_social_media"
       }
     ],
-    "live": "#",
+    "live": "https://tunisia-social.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
@@ -786,7 +786,7 @@ export const projects: Project[] = [
         "url": "https://github.com/seifeslimene/tunmart_tunisia"
       }
     ],
-    "live": "#",
+    "live": "https://tunmart.seifeddineslimene.com",
     "stars": 0,
     "forks": 0,
     "images": [
